@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('/icons', 'Api\IconController', [
-    'except' => ['edit', 'show', 'store']
+    'except' => ['edit', 'show', 'create']
 ]);
