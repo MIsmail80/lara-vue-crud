@@ -13344,6 +13344,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 function Icon(_ref) {
     var id = _ref.id,
@@ -13500,7 +13505,7 @@ exports = module.exports = __webpack_require__(40)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13874,6 +13879,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     computed: {
@@ -13908,34 +13920,62 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "icon-card" }, [
-    _c("div", { staticClass: "col-1" }, [
-      _c("i", { class: _vm.fa_class, style: _vm.styleColor })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-2" }, [
-      _c("h3", [_vm._v("Name: " + _vm._s(_vm._f("properCase")(_vm.name)))]),
-      _vm._v(" "),
-      _c(
-        "select",
-        { on: { change: _vm.update } },
-        _vm._l(["red", "green"], function(col) {
-          return _c(
-            "option",
-            {
-              key: col,
-              domProps: {
-                value: col,
-                selected: col === _vm.color ? "selected" : ""
-              }
-            },
-            [_vm._v(_vm._s(_vm._f("properCase")(col)) + "\n            ")]
+  return _c("div", { staticClass: "col-4" }, [
+    _c(
+      "div",
+      { staticClass: "icon-card card", staticStyle: { width: "18rem" } },
+      [
+        _c("div", { staticClass: "card-header" }, [
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v(_vm._s(_vm._f("properCase")(_vm.name)))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body text-center" }, [
+          _c("h6", { staticClass: "card-subtitle mb-2 text-muted" }, [
+            _c("i", { class: _vm.fa_class, style: _vm.styleColor })
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-text" }, [
+            _c(
+              "select",
+              { on: { change: _vm.update } },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("Change Color")
+                ]),
+                _vm._v(" "),
+                _vm._l(["red", "green"], function(col) {
+                  return _c(
+                    "option",
+                    {
+                      key: col,
+                      domProps: {
+                        value: col,
+                        selected: col === _vm.color ? "selected" : ""
+                      }
+                    },
+                    [
+                      _vm._v(
+                        _vm._s(_vm._f("properCase")(col)) +
+                          "\n                    "
+                      )
+                    ]
+                  )
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", on: { click: _vm.del } },
+            [_vm._v("Delete")]
           )
-        })
-      ),
-      _vm._v(" "),
-      _c("button", { on: { click: _vm.del } }, [_vm._v("Delete")])
-    ])
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -13956,12 +13996,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app" } },
-    [
-      _vm._m(0),
-      _vm._v(" "),
+  return _c("div", { staticClass: "container" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row" },
       _vm._l(_vm.icons, function(icon) {
         return _c(
           "icon-card-component",
@@ -13972,9 +14012,11 @@ var render = function() {
             false
           )
         )
-      }),
-      _vm._v(" "),
-      _c("div", [
+      })
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
         _c(
           "button",
           {
@@ -13984,19 +14026,22 @@ var render = function() {
               }
             }
           },
-          [_vm._v("Add")]
+          [_vm._v("Add Random Icon")]
         )
       ])
-    ],
-    2
-  )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "heading" }, [_c("h1", [_vm._v("Icons")])])
+    return _c("div", { staticClass: "heading" }, [
+      _c("h1", [_vm._v("Icons Book")]),
+      _vm._v(" "),
+      _c("hr")
+    ])
   }
 ]
 render._withStripped = true

@@ -1,17 +1,22 @@
 <template>
-    <div id="app">
+    <div class="container">
         <div class="heading">
-            <h1>Icons</h1>
+            <h1>Icons Book</h1>
+            <hr>
         </div>
-        <icon-card-component
-                v-for="icon in icons"
-                v-bind="icon"
-                :key="icon.id"
-                @update="update"
-                @delete="del"
-        ></icon-card-component>
-        <div>
-            <button @click="create()">Add</button>
+        <div class="row">
+            <icon-card-component
+                    v-for="icon in icons"
+                    v-bind="icon"
+                    :key="icon.id"
+                    @update="update"
+                    @delete="del"
+            ></icon-card-component>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button @click="create()">Add Random Icon</button>
+            </div>
         </div>
     </div>
 </template>
