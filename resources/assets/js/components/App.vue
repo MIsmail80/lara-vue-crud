@@ -1,8 +1,9 @@
 <template>
     <div class="container">
-        <div class="heading">
-            <h1>Icons Book</h1>
-            <hr>
+        <div class="row">
+            <div class="col header">
+                <h1>Icons Book</h1>
+            </div>
         </div>
         <div class="row">
             <icon-card-component
@@ -14,7 +15,7 @@
             ></icon-card-component>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col footer">
                 <button @click="create()">Add Random Icon</button>
             </div>
         </div>

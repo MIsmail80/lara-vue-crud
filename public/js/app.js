@@ -13349,6 +13349,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 function Icon(_ref) {
     var id = _ref.id,
@@ -14016,7 +14017,7 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [
+      _c("div", { staticClass: "col footer" }, [
         _c(
           "button",
           {
@@ -14037,10 +14038,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "heading" }, [
-      _c("h1", [_vm._v("Icons Book")]),
-      _vm._v(" "),
-      _c("hr")
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col header" }, [
+        _c("h1", [_vm._v("Icons Book")])
+      ])
     ])
   }
 ]

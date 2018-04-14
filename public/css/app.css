@@ -12,8 +12,23 @@ i {
   font-size: 26px !important;
 }
 
+.header {
+  padding: 20px 15px;
+  background: #2ab27b;
+  color: #FFF;
+}
+
+.header h1 {
+  font-weight: bold;
+}
+
 .icon-card,
-.heading {
+.header {
   margin-bottom: 50px;
+}
+
+.footer {
+  padding: 15px;
+  background: #EEE;
 }
 
