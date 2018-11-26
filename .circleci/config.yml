@@ -27,8 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run: composer install --no-interaction --prefer-dist --optimize-autoloader
-      - run: @php -r "file_exists('.env') || copy('.env.example', '.env');"
-      - run: @php artisan key:generate
+      - run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - run: php artisan key:generate
 
       - save_cache:
           paths:
